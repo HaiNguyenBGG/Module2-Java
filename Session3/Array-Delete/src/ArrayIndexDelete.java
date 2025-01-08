@@ -28,7 +28,7 @@ public class ArrayIndexDelete {
                 System.out.print(num + "\t");
             }
         } else {
-            System.out.print("Array is empty.");
+            System.out.println("Array is empty.");
         }
     }
 
