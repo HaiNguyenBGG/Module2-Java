@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Geometry {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        while (true) {
-            System.out.println("Menu");
+        do {
+            System.out.println("Menu:");
             System.out.println("1. Draw the triangle");
             System.out.println("2. Draw the square");
             System.out.println("3. Draw the rectangle");
@@ -22,9 +22,9 @@ public class Geometry {
                 default -> System.out.println("Invalid choice. Please try again.");
             }
             System.out.print("Press Enter to continue...");
-            sc.nextLine();
-            sc.nextLine();
-        }
+            sc.nextLine(); // Clear buffer
+            sc.nextLine(); // Wait for Enter key
+        } while (true);
     }
 
     private static void drawTriangle() {
@@ -37,8 +37,8 @@ public class Geometry {
     }
 
     private static void drawSquare() {
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
+        for (int i = 5; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
                 System.out.print("* ");
             }
             System.out.println();
