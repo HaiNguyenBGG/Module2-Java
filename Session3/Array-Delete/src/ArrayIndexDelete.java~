@@ -77,7 +77,6 @@ public class ArrayIndexDelete {
             }
         }
         System.out.println("Delete element successfully.");
-        return newArr;
     }
 }
 
