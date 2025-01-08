@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class FindMinValueArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the number of elements: ");
+        int n = sc.nextInt();
+
+        if (n <= 0) {
+            System.out.println("The number of elements must be greater than 0.");
+            return;
+        }
+
+        int[] arr = new int[n];
+
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < n; i++) {
+            System.out.printf("Element %d: ", i + 1);
+            arr[i] = sc.nextInt();
+        }
+
+        int min = arr[0];
+        int minIndex = 0;
+        for (int i = 1; i < n; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+                minIndex = i;
+            }
+        }
+
+        System.out.println("Min value is: " + min);
+        System.out.println("It is located at position:" + (minIndex + 1));
+
+
+    }
+}
