@@ -4,6 +4,10 @@ public class Book {
     String authorName;
     double price;
 
+    public Book(){
+
+    }
+
     public Book(String bookCode, String bookName, String authorName, double price) {
         this.bookCode = bookCode;
         this.bookName = bookName;
