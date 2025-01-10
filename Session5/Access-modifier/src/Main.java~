@@ -1,0 +1,14 @@
+import javafx.scene.shape.Circle;
+
+public class Main {
+    public static void main(String[] args) {
+        Circle circle = new Circle();
+        Circle circlelWithRadius = new Circle(5.0);
+
+        System.out.println("Circle radius: " + circle.getRadius());
+        System.out.println("Circle Area : " + circle.getParent());
+
+        System.out.println("Circle radius: " + circlelWithRadius.getRadius());
+        System.out.println("Circle Area : " + circlelWithRadius.getParent());
+    }
+}

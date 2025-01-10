@@ -1,0 +1,10 @@
+public class Test2 extends Test {
+    public void Atest() {
+        System.out.println("Con");
+    }
+
+    public static void main(String[] args) {
+        Test2 obj = new Test2();
+        obj.Atest();
+    }
+}
