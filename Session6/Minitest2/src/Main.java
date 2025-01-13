@@ -73,7 +73,6 @@ public class Main {
                 System.out.println(book);
             }
         }
-
         System.out.println("Total price of selected books: " + totalPrice);
     }
 
@@ -81,7 +80,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the programming language to search: ");
         String language = sc.nextLine().trim();
-
         int count = 0;
         System.out.println("Books with language '" + language + "':");
         for (Book book : books) {
@@ -121,13 +119,14 @@ public class Main {
             System.out.println("Number of FictionBooks in category '" + category + "': " + count);
         }
     }
+
     public static void printBooksByPrice(Book[] books) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the maximum price to search for books: ");
         double maxPrice = sc.nextDouble();
         int count = 0;
         System.out.println("Book with price less than " + maxPrice + " : ");
-        for( Book book : books) {
+        for (Book book : books) {
             if (book instanceof FictionBook) {
                 FictionBook fictionBook = (FictionBook) book;
                 if (fictionBook.getPrice() < maxPrice) {
