@@ -5,6 +5,10 @@ import resizeable.Resizeable;
 public class Circle implements Resizeable {
     private double radius;
 
+    public Circle(double radius) {
+    }
+
+
     public double getRadius() {
         return radius;
     }
