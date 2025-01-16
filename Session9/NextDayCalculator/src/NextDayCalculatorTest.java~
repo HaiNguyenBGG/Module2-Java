@@ -30,8 +30,9 @@ public class NextDayCalculatorTest {
         int day = 30;
         int month = 4;
         int year = 2018;
-        String expected = "30/4/2018";
+        String expected = "1/5/2018";
         String actual = NextDayCalculator.nextDay(day, month, year);
         assertEquals(expected, actual);
     }
+
 }

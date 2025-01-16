@@ -32,7 +32,10 @@ public class NextDayCalculator {
                 }
                 break;
             case 2:
-                day =28;
+                if (day == 28) {
+                    day = 1;
+                    month++;
+                }
                 break;
         }
         return day + "/" + month + "/" + year;
