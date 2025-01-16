@@ -14,6 +14,7 @@ public class NextDayCalculatorTest {
         String actual = NextDayCalculator.nextDay(day, month, year);
         assertEquals(expected, actual);
     }
+
     @Test
     @DisplayName("31/1/2018")
     public void testDay31Month1Year2018() {
@@ -24,6 +25,7 @@ public class NextDayCalculatorTest {
         String actual = NextDayCalculator.nextDay(day, month, year);
         assertEquals(expected, actual);
     }
+
     @Test
     @DisplayName("30/4/2018")
     public void testDay30Month4Year2018() {
@@ -34,8 +36,9 @@ public class NextDayCalculatorTest {
         String actual = NextDayCalculator.nextDay(day, month, year);
         assertEquals(expected, actual);
     }
+
     @Test
-    @DisplayName("30/4/2018")
+    @DisplayName("28/2/2018")
     public void testDay28Month02Year2018() {
         int day = 28;
         int month = 2;
@@ -45,4 +48,14 @@ public class NextDayCalculatorTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    @DisplayName("29/2/2018")
+    public void testDay29Month02Year2018() {
+        int day = 29;
+        int month = 2;
+        int year = 2018;
+        String expected = "1/3/2018";
+        String actual = NextDayCalculator.nextDay(day, month, year);
+        assertEquals(expected, actual);
+    }
 }
