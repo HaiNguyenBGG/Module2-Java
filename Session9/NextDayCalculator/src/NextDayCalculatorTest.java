@@ -58,5 +58,4 @@ public class NextDayCalculatorTest {
         String actual = NextDayCalculator.nextDay(day, month, year);
         assertEquals(expected, actual);
     }
-
 }
