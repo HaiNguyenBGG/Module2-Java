@@ -13,32 +13,39 @@ public class NextDayCalculator {
 
     private static String calculateNextDay(int day, int month, int year) {
         switch (month) {
-            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
                 if (day == LAST_DAY_OF_FULL_MONTH) {
-                    return resetToFirstDay(day, month, year);
+                    return resetDay(day, month, year);
                 }
                 break;
 
-            case 4: case 6: case 9: case 11:
+            case 4:
+            case 6:
+            case 9:
+            case 11:
                 if (day == LAST_DAY_OF_MISS_MONTH) {
-                    return resetToFirstDay(day, month, year);
+                    return resetDay(day, month, year);
                 }
                 break;
 
             case 2:
-                int lastDayOfFebruary = isLeapYear(year) ? LAST_DAY_OF_FEBRUARY_LEAP : LAST_DAY_OF_FEBRUARY_NON_LEAP;
+                int lastDayOfFebruary = checkIsLeapYear(year) ? LAST_DAY_OF_FEBRUARY_LEAP : LAST_DAY_OF_FEBRUARY_NON_LEAP;
                 if (day == lastDayOfFebruary) {
-                    return resetToFirstDay(day, month, year);
+                    return resetDay(day, month, year);
                 }
                 break;
         }
-
-        // Default increment day
         day++;
         return day + SLASH + month + SLASH + year;
     }
 
-    private static String resetToFirstDay(int day, int month, int year) {
+    private static String resetDay(int day, int month, int year) {
         day = FIRST_DAY_OF_MONTH;
         if (month == 12) {
             month = 1;
@@ -49,7 +56,7 @@ public class NextDayCalculator {
         return day + SLASH + month + SLASH + year;
     }
 
-    private static boolean isLeapYear(int year) {
+    private static boolean checkIsLeapYear(int year) {
         return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
     }
 }
