@@ -13,13 +13,24 @@ public class NextDayCalculatorTest {
         String expected = "2/1/2018";
         String actual = NextDayCalculator.nextDay(day, month, year);
         assertEquals(expected, actual);
-    }@Test
-    @DisplayName("1/1/2018")
-    public void testDay1Month1Year2018() {
-        int day = 1;
+    }
+    @Test
+    @DisplayName("31/1/2018")
+    public void testDay31Month1Year2018() {
+        int day = 31;
         int month = 1;
         int year = 2018;
-        String expected = "2/1/2018";
+        String expected = "1/2/2018";
+        String actual = NextDayCalculator.nextDay(day, month, year);
+        assertEquals(expected, actual);
+    }
+    @Test
+    @DisplayName("30/4/2018")
+    public void testDay30Month4Year2018() {
+        int day = 30;
+        int month = 4;
+        int year = 2018;
+        String expected = "30/4/2018";
         String actual = NextDayCalculator.nextDay(day, month, year);
         assertEquals(expected, actual);
     }
