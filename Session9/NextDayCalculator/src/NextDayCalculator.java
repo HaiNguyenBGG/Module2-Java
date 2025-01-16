@@ -36,16 +36,22 @@ public class NextDayCalculator {
                 }
                 break;
             case 2:
+                checkIsLeapYear(year);
                 if (day == 28) {
                     day = 1;
                     month++;
-                }
-                if (day == 29) {
+                } else if (day == 29) {
                     day = 1;
                     month++;
+                } else {
+                    day++;
                 }
-                break;
         }
         return day + "/" + month + "/" + year;
+    }
+    public static void checkIsLeapYear(int year) {
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            System.out.println("Leap year");
+        }
     }
 }

@@ -49,13 +49,14 @@ public class NextDayCalculatorTest {
     }
 
     @Test
-    @DisplayName("29/2/2018")
-    public void testDay29Month02Year2018() {
+    @DisplayName("29/2/2020")
+    public void testDay29Month02Year2020() {
         int day = 29;
         int month = 2;
-        int year = 2018;
-        String expected = "1/3/2018";
+        int year = 2020;
+        String expected = "1/3/2020";
         String actual = NextDayCalculator.nextDay(day, month, year);
         assertEquals(expected, actual);
     }
+
 }
