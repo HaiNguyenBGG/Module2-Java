@@ -21,7 +21,7 @@ public class NextDayCalculator {
                 if (day == LAST_DAY_OF_FULL_MONTH) {
                     day = FIRST_DAY_OF_MONTH;
                     if (month == 12) {
-                        day = FIRST_DAY_OF_MONTH;
+                        month = 1;
                         year++;
                     } else {
                         month++;
