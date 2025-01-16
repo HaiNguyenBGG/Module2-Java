@@ -6,6 +6,10 @@ public class NextDayCalculator {
     public static final int FIRST_DAY_OF_MONTH = 1;
 
     public static String nextDay(int day, int month, int year) {
+        return checkMonth(day, month, year);
+    }
+
+    private static String checkMonth(int day, int month, int year) {
         switch (month) {
             case 1:
             case 3:
@@ -51,6 +55,7 @@ public class NextDayCalculator {
         }
         return day + SLASH + month + SLASH + year;
     }
+
     public static void checkIsLeapYear(int year) {
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println("Leap year");
