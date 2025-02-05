@@ -47,7 +47,7 @@ public class MyLinkedListTest {
         printList(list);
     }
 
-    private static void printList(MyLinkedList<?> list) {
+    static private void printList(MyLinkedList<?> list) {
         Node<?> current = list.getFirstNode();
         while (current != null) {
             System.out.print(current.getData() + " -> ");
